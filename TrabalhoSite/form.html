@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Registro de Membros - Clube do Livro Online</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="form.html">Registro</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="registro">
+        <hr>
+        <h2><strong>Informações pessoais</strong></h2>
+        <form action="#" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+
+            <label for="cpf">CPF:</label>
+            <input type="cpf" id="cpf" name="cpf" required placeholder="Digite seu CPF">
+
+            <label id="lblDtNasc" for="data_nascimento">Data de Nascimento:</label>
+            <input type="date" id="data_nascimento" name="data_nascimento" required>
+
+            <!-- <label for="idade">Idade:</label>
+            <input type="range" name="idade" id="idade" min="1" max="100" step="1" value="1">
+            <label id="lblIdade"></label> -->
+
+        </form>
+        <h2><strong>Informações de contato</strong></h2>
+        <form action="#" method="post">
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required placeholder="Digite seu email">
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required placeholder="Digite seu telefone"
+                pattern="[0-9]{11}" title="Informe um número de telefone válido (apenas números)">
+
+                <label for="endereco">Endereço:</label>
+                <input id="endereco" name="endereco" required placeholder="Digite o seu endereço:">
+            
+        </form>
+
+        <input type="submit" value="Registrar" class="btn">
+
+        <a href="../index.html" class="mudarTela">Voltar à página inicial</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Livraria Online</p>
+    </footer>
+
+    <script>
+        let idadeInput = document.querySelector("#idade");
+        let lblIdade = document.querySelector("#lblIdade");
+
+        idadeInput.addEventListener("input", function () {
+            lblIdade.textContent = idadeInput.value;
+        });
+    </script>
+</body>
+
+</html>
